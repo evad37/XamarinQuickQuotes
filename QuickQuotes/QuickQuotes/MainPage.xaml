@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="QuickQuotes.MainPage">
+    <StackLayout Padding="10">
+        <Label Text="QuickQuotes!" FontSize="Title" TextColor="DarkMagenta"
+               Margin="0,0,0,10" HorizontalOptions="Center" VerticalOptions="Start" />
+        <Label x:Name="quoteHeadingLabel"  Text="QUOTE" FontSize="Caption" Margin="0,10,0,0" />
+        <Label x:Name="quoteTextLabel" Text="The quote will appear here." FontSize="Medium" />
+        <Label x:Name="quoteAuthorHeadingLabel"  Text="AUTHOR" FontSize="Caption" Margin="0,10,0,0" />
+        <Label x:Name="quoteAuthorLabel" Text="Somebody's name" FontSize="Body" />
+        <Button x:Name="randomQuoteButton" Text="Random Quote" Margin="10,10,10,20" Clicked="RandomQuoteButton_Clicked" />
+        <StackLayout Orientation="Horizontal" Margin="0,10,0,0" >
+            <Label x:Name="addQuoteHeadingLabel" Text="ADD NEW QUOTE" FontSize="Caption"/>
+            <Label x:Name="quoteAddedLabel" Text="Quote added!" FontSize="Caption" HorizontalOptions="EndAndExpand" TextColor="DarkGreen" FontAttributes="Bold"/>
+        </StackLayout>
+        <Editor x:Name="quoteTextEditor" Placeholder="Quote" PlaceholderColor="Silver" VerticalOptions="FillAndExpand" TextChanged="QuoteBeingEdited_TextChanged"/>
+        <Entry x:Name="quoteAuthorEntry" Placeholder="Author" PlaceholderColor="Silver" TextChanged="QuoteBeingEdited_TextChanged"/>
+        <Button x:Name="addQuoteButton" Text="Add Quote" Margin="10,10,10,10" Clicked="AddQuoteButton_Clicked" />
+    </StackLayout>
+</ContentPage>
